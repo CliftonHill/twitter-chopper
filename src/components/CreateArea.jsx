@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function CreateArea (){
+export default function CreateArea (props){
   return (
-    <div>
+    <div id="create-area">
+      <span className="visibility" onClick={props.clear}>Clear All</span>
       <form >
-      <textarea id="create-area" name="input" type="text" rows="1" placeholder="Type your Post here..." /><br/>
-      <button type="submit" >Chop</button>
+      <textarea onClick={props.expand} onChange={props.event} name="input" value={props.content} type="text" rows={props.rows} placeholder="Type your 280+ character post here..." /><br/>
+      <span className="char-count">{props.length}</span> <button type="button" onClick={props.action} disabled={props.buttonStat}>Chop</button>
       </form>
 
     </div>
