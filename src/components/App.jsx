@@ -21,7 +21,7 @@ export default function App (){
     setPost({
       text: event.target.value,
       chars: postLength,
-      estTweets: "| Tweets≈" + Math.ceil(postLength / 275)
+      estTweets: "| ≈" + Math.ceil(postLength / 275) + " tweets"
     });
     if (postLength > 220) {
       setRows(10);
@@ -148,7 +148,7 @@ function handleClickClear () {
   });
   setButtonStat(true);
   setRows(5);
-  document.querySelector("#create-area textarea").style.color = "initial";
+  document.querySelector("#create-area textarea").style.color = "#4a93ff";
   document.querySelector("#create-area textarea").focus();
 }
 

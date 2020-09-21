@@ -3,11 +3,14 @@ Features:
 -retains line-breaks and extra spaces
 -thread of thread# is automatically generated
 -copy function copies entire tweet for repaste in Twitter
+-ready for desktop use
 
 
 Future improvements:
+-make mobile ready
 -Breakpoint: identify if we have a natural stop (period with a space following) that can also serve as a break point and doesn't need an ellipsis
 -allow tweet chops to be individually edited
+-if editing post, then change back to a blue color, and pop up a refresh note to click the check button again, or maybe line through the tweets below to indicate that it needs to be redone?
 
 Bugs:
 
