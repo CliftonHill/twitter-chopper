@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   background-color: #aca;
+  padding-bottom: 3rem;
 }
 
 h1 {
@@ -13,50 +14,74 @@ h1 {
 }
 
 header {
-  min-width 30rem;
+  min-width: 30rem;
   width: 60%;
   text-align: center;
 }
 
 main {
   width: 60%;
-  margin: 0 auto;
-  padding-bottom: 1rem;
+  min-height: 30rem;
+  margin: 0 auto 2rem auto;
+
 }
 
 footer {
   text-align: center;
+  color: gray;
+  padding-top: 0.5rem;
   position: absolute;
   bottom: 0;
   background-color: white;
   width: 100%;
+  height: 3rem;
 }
 
 .tweet {
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: lightgray;
+  background-color: white;
   box-shadow: 3px 3px 2px gray;
-  display: inline-block;
+  position: relative;
+  white-space: pre-wrap;
+}
 
+.tweet button {
+  border: none;
+  font-size: 1.2rem;
+}
+
+.tweet button:focus {
+  outline: none;
 }
 
 .char-count {
   color: gray;
+  position: relative;
+  text-align: right;
 }
 
 .visibility {
-  color: blue;
   visibility: hidden;
   display: flex;
   justify-content: center;
-  cursor: pointer;
 }
 
 #create-area {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 2px gray;
+}
 
+#create-area button {
+  float: right;
 }
 
 #create-area textarea {
+  resize: none;
   width: 100%;
+  border: none;
+  outline: none;
 }
