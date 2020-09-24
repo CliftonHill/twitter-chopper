@@ -4,12 +4,11 @@ Features:
 -thread of thread# is automatically generated
 -copy function copies entire tweet for repaste in Twitter
 -ready for desktop use
-
+-Responsive website
 
 Future improvements:
--make mobile ready
 -Breakpoint: identify if we have a natural stop (period with a space following) that can also serve as a break point and doesn't need an ellipsis
--allow tweet chops to be individually edited
+-allow tweet chops to be individually edited, and as one tweet expands the text automatically flows to the next and so on for realtime editing of them all for maximum pop!
 -if editing post, then change back to a blue color, and pop up a refresh note to click the check button again, or maybe line through the tweets below to indicate that it needs to be redone?
 
 Bugs:

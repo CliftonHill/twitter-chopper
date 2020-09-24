@@ -18,7 +18,6 @@ h1 {
   font-family: 'Ranchers', cursive;
   font-weight:normal;
   font-size: 2.8rem;
-  display: inline-block;
 }
 
 h2 {
@@ -26,13 +25,13 @@ h2 {
   color: #4a93ff;
   font-weight: normal;
   font-size: 1.3rem;
-  display: inline-block;
 }
 
 header {
   min-width: 30rem;
   width: 60%;
   text-align: center;
+  margin-left: 1rem;
 }
 
 main {
@@ -50,7 +49,7 @@ footer {
   bottom: 0;
   background-color: #e6f2ff;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
 }
 
 .tweet {
@@ -83,6 +82,10 @@ footer {
   justify-content: center;
 }
 
+.small {
+  font-size: 0.8rem;
+}
+
 #create-area {
   margin-bottom: 1.5rem;
   background-color: white;
@@ -101,4 +104,21 @@ footer {
   border: none;
   outline: none;
   color: #4a93ff;
+}
+
+/* ***RESIZING*** */
+/* FOR TABLET */
+@media screen and (max-width: 1024px) {
+  main, header {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  main, header {
+    min-width: 20rem;
+    width: 95%;
+  }
+
 }

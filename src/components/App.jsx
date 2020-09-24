@@ -16,6 +16,8 @@ export default function App (){
   const [clickedInto, setClickedInto] = useState(false);
   const [revealClear, setRevealClear] = useState(false);
 
+  const checkPoint = 273;
+
   function handleChange (event) {
     const postLength = event.target.value.length;
     setPost({
@@ -80,8 +82,8 @@ export default function App (){
 
   function handleClick () {
     // capture content of post, evaluate how many characters to split it into, then setChops for each segment wit ha fore loop 280, save 5 characters for tweet of tweet + 1 return + 2 elipsis for 9 characters.
-      // if first brea kpoint is a " ", then set all characters prior to setChops value, and reflect char count of 271
-        // else need to iterate backwards until a space is found, note the index value, cut to that kpoint
+      // if first breakpoint is a " ", or ending punctuation followed by a space, or a return, then set all characters prior to setChops value, and reflect char count of 273
+        // else need to iterate backwards until a breakPoint is found, note the index value, cut to that kpoint
     //reset
     if (chops.length > 0) {
       setChops([]);
@@ -92,16 +94,20 @@ export default function App (){
     //Main Purpose of handleClick
     let priorBreakPoint = 0;
 
-    for (let i = 0; (post.text.length - i) > 271; i = priorBreakPoint) {
-      let breakPoint = i + 271;
-      //continues until last chunk of chars is < 271 char, which means it won't capture the last chunk, which we'll have to capture after
-      if (post.text[breakPoint] === " "){
+    for (let i = 0; (post.text.length - i) > checkPoint; i = priorBreakPoint) {
+      let breakPoint = i + checkPoint;
+      //continues until last chunk of chars is < 273 char, which means it won't capture the last chunk, which we'll have to capture after
+      let punctuationMarks = /[.?!:;-]]/;
+      let carReturn = /[\n\r]/;
+      if (post.text[breakPoint] === " " || (post.text[breakPoint] === punctuationMarks && post.text[breakPoint + 1] === " ") || post.text[breakPoint] === carReturn){
         console.log("1st");
         let currSegment = post.text.slice(i, breakPoint).trim();
         setChops(prevValue => [...prevValue, {
         text: currSegment
       }]);
 
+    } else if (false) {
+      // in here place the above conditionals that would not need an ellipsis following, because we have not broken a sentence into a portion, such as a period, or return... This will set a variable that can be used to not include the ellipses when applicable.
     } else { //loop backwards until a space is found and break the post there. Then updated breakpoint
         console.log("else");
           for (let j = breakPoint; post.text[j] !== " "; j--) {
@@ -117,7 +123,7 @@ export default function App (){
         priorBreakPoint = breakPoint;
       }
       // should have captured all but last chunk of post, capture the last piece here, slice to end
-      let isNextChopTheLast = priorBreakPoint + 271 > post.text.length;
+      let isNextChopTheLast = priorBreakPoint + checkPoint > post.text.length;
       if (isNextChopTheLast) {
         console.log("made it");
           let currSegment = post.text.slice(priorBreakPoint).trim();

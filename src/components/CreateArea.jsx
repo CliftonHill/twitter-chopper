@@ -11,7 +11,7 @@ export default function CreateArea (props){
       <div className="visibility"><Zoom in={props.reveal} ><Button onClick={props.clear}>Clear All</Button></Zoom></div>
       <form id="create-area">
       <textarea onClick={props.expand} onChange={props.event} name="input" value={props.content} type="text" rows={props.rows} placeholder="Type your 280+ character post here..." /><br/>
-      <span className="char-count">{props.length} {props.estimate}</span> <Zoom in={props.length > 280 && "true"}><Fab onClick={props.action} disabled={props.buttonStat}><CheckIcon style={{fontSize: "2rem"}}/></Fab></Zoom>
+      <span className="char-count">{props.length} {props.estimate}</span> <Zoom in={props.length > 280 && "true"}><Fab onClick={props.action} disabled={props.buttonStat} title="Chop!"><CheckIcon style={{fontSize: "2rem"}}/></Fab></Zoom>
       </form>
 
     </div>
