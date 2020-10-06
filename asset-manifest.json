@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/twitter-chopper/static/js/main.b1a0246d.chunk.js",
-    "main.js.map": "/twitter-chopper/static/js/main.b1a0246d.chunk.js.map",
+    "main.js": "/twitter-chopper/static/js/main.e51274f0.chunk.js",
+    "main.js.map": "/twitter-chopper/static/js/main.e51274f0.chunk.js.map",
     "runtime-main.js": "/twitter-chopper/static/js/runtime-main.96e9e419.js",
     "runtime-main.js.map": "/twitter-chopper/static/js/runtime-main.96e9e419.js.map",
     "static/js/2.85aa5b65.chunk.js": "/twitter-chopper/static/js/2.85aa5b65.chunk.js",
     "static/js/2.85aa5b65.chunk.js.map": "/twitter-chopper/static/js/2.85aa5b65.chunk.js.map",
     "index.html": "/twitter-chopper/index.html",
-    "precache-manifest.992a43c3aeedbafc28286a35ef13704e.js": "/twitter-chopper/precache-manifest.992a43c3aeedbafc28286a35ef13704e.js",
+    "precache-manifest.ef7e9765db51e3ef569cdf42f76bad04.js": "/twitter-chopper/precache-manifest.ef7e9765db51e3ef569cdf42f76bad04.js",
     "service-worker.js": "/twitter-chopper/service-worker.js",
     "static/js/2.85aa5b65.chunk.js.LICENSE.txt": "/twitter-chopper/static/js/2.85aa5b65.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.96e9e419.js",
     "static/js/2.85aa5b65.chunk.js",
-    "static/js/main.b1a0246d.chunk.js"
+    "static/js/main.e51274f0.chunk.js"
   ]
 }
